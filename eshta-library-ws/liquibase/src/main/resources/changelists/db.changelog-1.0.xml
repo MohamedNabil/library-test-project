@@ -4,14 +4,42 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
 
 
-    <changeSet id="1" author="AndrewKharchenko">
-        <createTable tableName="sample" schemaName="public">
+
+    
+    <changeSet id="1" author="M.Nabil">
+        <createTable tableName="book" schemaName="public">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="isbn" type="VARCHAR(256)">
+             <constraints nullable="false" unique="true"/>
+             </column>
+            <column name="title" type="VARCHAR(256)"/>
+            <column name="author" type="VARCHAR(256)"/>
+            <column name="photo_url" type="VARCHAR(256)"/>
+            <column name="book_lent" type="Boolean"/>
+        </createTable>
+    </changeSet>
+    
+        <changeSet id="2" author="M.Nabil">
+        <createTable tableName="reader" schemaName="public">
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints nullable="false"/>
             </column>
             <column name="name" type="VARCHAR(256)"/>
+            <column name="registeration_date" type="DATE"/>
         </createTable>
     </changeSet>
-
+    
+    
+	    <changeSet id="3" author="M.Nabil">
+        <createTable tableName="book_reader" schemaName="public">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="book_id" type="BIGINT"/>
+            <column name="reader_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>
 
