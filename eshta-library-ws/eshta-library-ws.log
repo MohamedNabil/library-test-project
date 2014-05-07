@@ -2394,3 +2394,22 @@
 19:38:23,471 main DEBUG OpenEntityManagerInViewFilter:172 - Initializing filter 'oemiv'
 19:38:23,472 main DEBUG OpenEntityManagerInViewFilter:197 - Filter 'oemiv' configured successfully
 19:38:23,523 main DEBUG DefaultListableBeanFactory:245 - Returning cached instance of singleton bean 'cxf'
+19:39:57,689 qtp1130997003-19 DEBUG DefaultListableBeanFactory:245 - Returning cached instance of singleton bean 'entityManagerFactory'
+19:39:57,890 qtp1130997003-19 DEBUG OpenEntityManagerInViewFilter:136 - Opening JPA EntityManager in OpenEntityManagerInViewFilter
+19:39:58,001 qtp1130997003-19 DEBUG OpenEntityManagerInViewFilter:154 - Closing JPA EntityManager in OpenEntityManagerInViewFilter
+19:39:58,004 qtp1130997003-19 DEBUG EntityManagerFactoryUtils:343 - Closing JPA EntityManager
+19:39:58,042 qtp1130997003-19 DEBUG SessionImpl:220 - opened session at timestamp: 5732273348636672
+19:40:23,496 qtp1130997003-22 DEBUG OpenEntityManagerInViewFilter:136 - Opening JPA EntityManager in OpenEntityManagerInViewFilter
+19:40:23,513 qtp1130997003-22 DEBUG OpenEntityManagerInViewFilter:154 - Closing JPA EntityManager in OpenEntityManagerInViewFilter
+19:40:23,513 qtp1130997003-22 DEBUG EntityManagerFactoryUtils:343 - Closing JPA EntityManager
+19:40:23,513 qtp1130997003-22 DEBUG SessionImpl:220 - opened session at timestamp: 5732273453109248
+19:42:40,991 Thread-1  INFO XmlWebApplicationContext:1032 - Closing Root WebApplicationContext: startup date [Wed May 07 19:38:18 EEST 2014]; root of context hierarchy
+19:42:40,997 Thread-1 DEBUG DefaultListableBeanFactory:245 - Returning cached instance of singleton bean 'lifecycleProcessor'
+19:42:40,997 Thread-1  INFO DefaultListableBeanFactory:434 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@76f56093: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,entityManagerFactory,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,jpaTemplate,readerDaoImpl,sampleObjectDaoImpl,bookDaoImpl,readerServiceImpl,testServiceImpl,bookServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,restContainer,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+19:42:40,998 Thread-1 DEBUG DefaultListableBeanFactory:489 - Retrieved dependent beans for bean 'com.siliconnile.library.ws.service.impl.TestWebServiceImpl#529afcab': [restContainer]
+19:42:40,998 Thread-1 DEBUG DisposableBeanAdapter:275 - Invoking destroy method 'shutdown' on bean with name 'cxf'
+19:42:40,999 Thread-1 DEBUG DisposableBeanAdapter:199 - Invoking destroy() on bean with name 'entityManagerFactory'
+19:42:40,999 Thread-1  INFO LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'testPU'
+19:42:40,999 Thread-1  INFO SessionFactoryImpl:769 - closing
+19:42:41,002 Thread-1 DEBUG DefaultListableBeanFactory:489 - Retrieved dependent beans for bean 'org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter#31b52add': [entityManagerFactory]
+19:42:41,004 Thread-1 DEBUG DisposableBeanAdapter:275 - Invoking destroy method 'close' on bean with name 'dataSource'
