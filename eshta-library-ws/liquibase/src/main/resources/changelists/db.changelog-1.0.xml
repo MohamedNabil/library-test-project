@@ -59,7 +59,22 @@
             tableName="book_reader" />
             
        </changeSet>
+     
+      <changeSet id="5" author="M.Nabil"> 
        
+            <addForeignKeyConstraint baseColumnNames="reader_id"
+            baseTableName="book_reader"
+            constraintName="fk_reader"
+     
+            referencedColumnNames="id"
+            referencedTableName="reader"/>
        
+            <addForeignKeyConstraint baseColumnNames="book_id"
+            baseTableName="book_reader"
+            constraintName="fk_book"
+     
+            referencedColumnNames="id"
+            referencedTableName="book"/>
+        </changeSet>
 </databaseChangeLog>
 
