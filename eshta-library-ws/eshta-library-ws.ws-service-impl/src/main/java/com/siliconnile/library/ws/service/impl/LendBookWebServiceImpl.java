@@ -1,17 +1,11 @@
 package com.siliconnile.library.ws.service.impl;
 
-import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.FormParam;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.core.Context;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.siliconnile.library.dao.BookDAO;
 import com.siliconnile.library.domain.Book;
 import com.siliconnile.library.dto.BookDTO;
-import com.siliconnile.library.ws.service.api.LendBookWebService;;
+import com.siliconnile.library.ws.service.api.LendBookWebService;
 
 
 /**

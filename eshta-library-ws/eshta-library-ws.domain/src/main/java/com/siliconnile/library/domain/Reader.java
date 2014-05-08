@@ -10,6 +10,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.ManyToMany;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 
 /**
@@ -25,7 +26,7 @@ public class Reader extends BasicObject{
 
 	private Date registrationDate;
 	
-	private List<Book> books;
+	private List<BookReader> bookReader;
 	
 	@Column(name="name")
 	public String getName() {
@@ -44,18 +45,17 @@ public class Reader extends BasicObject{
 	public void setRegistrationDate(Date registrationDate) {
 		this.registrationDate = registrationDate;
 	}
+	@OneToMany(cascade={CascadeType.ALL}, mappedBy="reader")
+	public List<BookReader> getBookReader() {
+		return bookReader;
+	}
+	
+	public void setBookReader(List<BookReader> bookReader) {
+		this.bookReader = bookReader;
+	}
     
-	@ManyToMany(cascade = {CascadeType.ALL})
-    @JoinTable(name="EMPLOYEE_MEETING",
-                joinColumns={@JoinColumn(name="reader_id")},
-                inverseJoinColumns={@JoinColumn(name="id")})
-	public List<Book> getBooks() {
-		return books;
-	}
 
-	public void setBooks(List<Book> books) {
-		this.books = books;
-	}
+
 
 
 }

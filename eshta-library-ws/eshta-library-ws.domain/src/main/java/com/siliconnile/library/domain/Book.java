@@ -2,6 +2,7 @@ package com.siliconnile.library.domain;
 
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Column;
 import com.pearlox.framework.domain.BasicObject;
@@ -25,16 +26,12 @@ public class Book extends BasicObject{
 	private Boolean lent =false;
 	private String photoUrl;
 	
-	private List<Reader> readers;
+
+	private List<BookReader> bookReader;
 	
 	
-	@ManyToMany(cascade={CascadeType.ALL}, mappedBy="books")
-	public List<Reader> getReaders() {
-		return readers;
-	}
-	public void setReaders(List<Reader> readers) {
-		this.readers = readers;
-	}
+
+
 	@Column(name ="title")
 	public String getTitle() {
 		return title;
@@ -73,6 +70,13 @@ public class Book extends BasicObject{
 	}
 	public void setLent(Boolean lent) {
 		this.lent = lent;
+	}
+	@OneToMany(cascade={CascadeType.ALL}, mappedBy="book")
+	public List<BookReader> getBookReader() {
+		return bookReader;
+	}
+	public void setBookReader(List<BookReader> bookReader) {
+		this.bookReader = bookReader;
 	}
 	
 
