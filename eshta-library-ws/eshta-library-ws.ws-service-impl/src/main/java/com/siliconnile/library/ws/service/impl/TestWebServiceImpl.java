@@ -7,6 +7,7 @@ import com.siliconnile.library.ws.service.api.TestWebService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.core.Response;
 
 /**
  * User: Andrew
@@ -27,4 +28,14 @@ public class TestWebServiceImpl implements TestWebService {
         }
         return result;
     }
+	
+    @Override
+	public
+	Response mulxNumber(int firstnum,int secondnum) {
+		// TODO Auto-generated method stub
+		int mul= firstnum*secondnum;
+	return Response.status(200)
+			.entity(mul)
+			.build();
+	}
 }

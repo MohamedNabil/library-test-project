@@ -34,12 +34,32 @@
     
 	    <changeSet id="3" author="M.Nabil">
         <createTable tableName="book_reader" schemaName="public">
-            <column name="id" type="BIGINT" autoIncrement="true">
-                <constraints nullable="false"/>
-            </column>
             <column name="book_id" type="BIGINT"/>
             <column name="reader_id" type="BIGINT"/>
         </createTable>
     </changeSet>
+     <changeSet id="4" author="M.Nabil">
+           <addPrimaryKey 
+            columnNames="id"
+            constraintName="pk_Book_id"
+            
+            tableName="book"
+           ></addPrimaryKey>
+       
+           
+     	   <addPrimaryKey 
+            columnNames="id"
+            constraintName="pk_Reader_id"
+            tableName="reader"/>   
+            
+            <addPrimaryKey
+            columnNames="book_id,reader_id"
+            constraintName="pk_book_reader"
+            schemaName="public"
+            tableName="book_reader" />
+            
+       </changeSet>
+       
+       
 </databaseChangeLog>
 

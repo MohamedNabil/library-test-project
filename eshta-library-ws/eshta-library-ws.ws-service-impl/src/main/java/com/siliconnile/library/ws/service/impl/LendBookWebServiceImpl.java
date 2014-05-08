@@ -25,7 +25,7 @@ public class LendBookWebServiceImpl implements LendBookWebService {
 	
 	
 	@Override
-	public BookDTO lendBooKById( Long id,HttpServletResponse response) {
+	public BookDTO lendBooKById( Long id) {
 		// TODO Auto-generated method stub
 		
 		try {
@@ -43,8 +43,7 @@ public class LendBookWebServiceImpl implements LendBookWebService {
 
 	@Override
 	public BookDTO addBooK(String title,
-	 String author, String isbn, String photoUrl,
-			@Context HttpServletResponse response) {
+	 String author, String isbn, String photoUrl) {
 		// TODO Auto-generated method stub
 		
 

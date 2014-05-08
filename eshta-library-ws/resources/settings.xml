@@ -12,7 +12,7 @@
                 <settings.db.password>testdb</settings.db.password>
                 
                 <socket.port.bio>8090</socket.port.bio>
-                <socket.port.nio>8091</socket.port.nio>
+                <socket.port.nio>8092</socket.port.nio>
             </properties>
         </profile>
     </profiles>

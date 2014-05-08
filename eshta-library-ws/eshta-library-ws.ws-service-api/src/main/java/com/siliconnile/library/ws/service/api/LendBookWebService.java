@@ -16,20 +16,17 @@ import com.siliconnile.library.dto.BookDTO;
  * author: M.Nabil
  * Date: 7/5/14
  */
-
-@WebService
 @Path("/lend")
 public interface LendBookWebService {
 
 	    @GET
 	    @Path("/book/{id}")
 	    @Produces(MediaType.APPLICATION_JSON)
-	    public BookDTO lendBooKById(@PathParam("id") Long id,
-	                                               @Context HttpServletResponse response);
+	    public BookDTO lendBooKById(@PathParam("id") Long id);
 	    
 	    @POST
 	    @Path("/add")
 	    @Produces(MediaType.APPLICATION_JSON)
 	    public BookDTO addBooK(@FormParam("title") String title,@FormParam("author") String author,@FormParam("isbn") String isbn,
-	    		@FormParam("photo") String photoUrl, @Context HttpServletResponse response);
+	    		@FormParam("photo") String photoUrl);
 }
